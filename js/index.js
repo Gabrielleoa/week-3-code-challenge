@@ -16,7 +16,8 @@ function displayMoviesShowing(films){
         console.log(film)
         let movies = document.getElementById("listOfMovies")
         let li = document.createElement('li')
-        li.textContent= film.name 
+
+        li.textContent= film.title 
         li.addEventListener('click', () => getMovieInfo(film));
         movies.appendChild(li)
        
