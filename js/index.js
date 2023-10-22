@@ -14,19 +14,20 @@ function displayMoviesShowing(films){
     const movieListing= document.getElementById("movieListingArea");
     for(const film of films) {
         console.log(film)
-        let movies = document.getElementById("name")
+        let movies = document.getElementById("listOfMovies")
         let li = document.createElement('li')
         li.textContent= film.name 
-        addEventListener('click', () => getMovieInfo(film));
+        li.addEventListener('click', () => getMovieInfo(film));
         movies.appendChild(li)
-        
+       
     }
 }
 function getMovieInfo(film){
     const movieDetails = document.getElementById('movieInformation')
-    movieDetails.innerHTML = `<h2> id="data"> ${film.name}</h2>
-    <img src="${film.poster}" alt="${film.name} Image">
+    movieDetails.innerHTML = `<h3>${film.title}<h3>
+    <img src="${film.poster}" Image">
     <p>Tickets Sold: ${film.tickets_sold}</p>`;
 
 }
+
 
